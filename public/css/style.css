@@ -1,0 +1,722 @@
+header.light-theme, footer.light-theme, form.light-theme {
+    background-color: #f8f9fa;
+    text-decoration: none;
+    color: #000000;
+}
+header.dark-theme, form.dark-theme, footer.dark-theme {
+    background-color: #343a40;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+header.light-theme, footer.light-theme {
+    background-color: #ebebeb;
+    color: #000000;
+}
+header.dark-theme, footer.dark-theme {
+    background-color: #1f1f1f !important;
+    color: #fff !important;
+}
+header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина шапки на весь экран */
+    z-index: 1000; /* Устанавливает приоритет отображения над другими элементами */
+    background-color: #ffffff; /* Фон шапки (по желанию) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень для акцента */
+    padding: 10px 20px; /* Отступы внутри шапки */
+}
+body.light-theme {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding-top:80px;
+}
+body.dark-theme {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    padding-top:80px;
+}
+.main-page {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.form-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.theme-switch {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switch .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-switch .slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+.theme-switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.theme-switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+form.light-theme {
+    background-color:#ebebeb;
+}
+form.dark-theme {
+    background-color:#1f1f1f;
+}
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #555;
+}
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+}
+footer {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+footer.light-theme > ul > li > a {
+    text-decoration: none;
+    color: #000;
+}
+footer.light-theme > ul > li > a:hover {
+    text-decoration: underline;
+}
+footer.dark-theme > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+}
+footer.dark-theme > ul > li > a:hover {
+    text-decoration: underline;
+}
+footer > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px;
+    flex: 1 1 200px;
+    box-sizing: border-box;
+}
+footer ul li {
+    margin: 10px 0;
+}
+footer > ul > li > img {
+    margin-right: 10px;
+}
+.footer-copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer ul {
+        margin: 10px 0;
+    }
+    section {
+        margin-bottom: 40px;
+    }
+}
+    .carousel-inner {
+        overflow: hidden;
+    }
+    
+    .carousel-item {
+        transition: transform 0.6s ease-in-out;
+    }
+    
+    .carousel-item-row {
+        max-height: 396px;
+        display: flex;
+    }
+    
+    .carousel-item-row img {
+        width: 252px;
+        height: 396px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    
+    /* На мобильных скрываем лишние слайды */
+    @media (max-width: 767.98px) {
+        .carousel-item .col-md-4:not(:first-child) {
+            display: none;
+        }
+        .carousel-item .col-md-4 {
+            width: 100%;
+        }
+    }
+
+.row.gx-3 {
+    gap: 15px; /* Отступ между изображениями */
+}
+main {
+    overflow: hidden; /* Предотвращает появление полос прокрутки */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.about-manga {
+    place-items: center;
+}
+h2, .about-manga h2 {
+    text-align: center;
+    font-size: 34px;
+}
+
+.about-manga p {
+    width: 1300px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.genre1, .genre2 {
+    margin-bottom: 0px !important;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+}
+
+footer ul li h3 {
+    text-align: left;
+}
+.card-item {
+    min-height: 176px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-radius: 30px 0 30px 0;
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 575.98px) {
+    .card-item {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-item {
+        min-width: 280px;
+    }
+}
+
+.light-theme .nav-link {
+    color: black;
+}
+
+.dark-theme .nav-link {
+    color: white;
+}
+
+.navbar-toggler {
+    margin-left: auto; /* Перемещает кнопку вправо */
+}
+.dark-theme .nav-link:hover {
+    color: white !important;
+  }
+
+.light-theme .nav-link:hover {
+    color: black !important;
+}
+
+.cover-preview {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.upload-area:hover {
+    border-color: #adb5bd;
+    background-color: #f8f9fa;
+}
+
+.genres {
+    margin: 15px 0;
+}
+
+.badge {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    min-width: 300px;
+    animation: fadeIn 0.3s, fadeOut 0.5s 2.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+/* Делаем все поля одинаковой высоты */
+.form-control, .form-select {
+    height: 50px;
+    width: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/* Отступы для подписей */
+.form-label {
+    margin-bottom: 8px !important;
+}
+/* Выравнивание кнопок */
+.btn {
+    height: 50px;
+}
+.form-control {
+    margin: 0px !important;
+}
+
+/* Общие стили контейнеров */
+.info-container,
+.characters-container,
+.reviews-container {
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+/* Светлая тема */
+.light-theme .info-container,
+.light-theme .characters-container,
+.light-theme .reviews-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Тёмная тема */
+.dark-theme .info-container,
+.dark-theme .characters-container,
+.dark-theme .reviews-container {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для карточек персонажей */
+.character-card {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.character-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.character-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background: rgba(0,0,0,0.85);
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.character-card:hover .character-description {
+    opacity: 1 !important; 
+}
+
+.character-card:hover .character-name {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.light-theme .character-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .character-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для отзывов */
+.reviews-list .card {
+    transition: all 0.3s;
+}
+
+.light-theme .reviews-list .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark-theme .reviews-list .card {
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Общие стили для формы */
+/*** ТЁМНАЯ ТЕМА (все стили внутри .dark-theme) ***/
+.dark-theme .review-card {
+    background-color: rgba(40, 40, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #f7fafc;
+}
+
+.dark-theme .review-textarea {
+    background-color: rgba(30, 30, 30, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #f7fafc;
+}
+
+.dark-theme .review-textarea::placeholder {
+    color: #a0aec0;
+}
+
+.dark-theme .btn-primary {
+    background-color: #4299e1;
+    border-color: #4299e1;
+}
+
+.dark-theme .btn-primary:hover {
+    background-color: #3182ce;
+    border-color: #3182ce;
+}
+
+.dark-theme .review-form {
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+/*** СВЕТЛАЯ ТЕМА ***/
+.light-theme .review-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #333;
+}
+
+.light-theme .review-textarea {
+    background-color: #f8f9fa !important;
+    border-color: #ddd;
+    color: #333;
+}
+
+.light-theme .review-textarea::placeholder {
+    color: #6c757d;
+}
+
+.light-theme .review-form {
+    background-color: rgba(255, 255, 255, 0.9);;
+}
+/* Общие стили (для всех тем) */
+.review-card {
+    transition: all 0.3s ease;
+}
+
+.review-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Общие стили для кнопок лайков/дизлайков */
+.dark-theme .btn-outline-success {
+    color: #68d391;
+    border-color: #68d391;
+}
+
+.dark-theme .btn-outline-success:hover {
+    background-color: rgba(104, 211, 145, 0.1);
+}
+
+.dark-theme .btn-outline-danger {
+    color: #fc8181;
+    border-color: #fc8181;
+}
+
+.dark-theme .btn-outline-danger:hover {
+    background-color: rgba(252, 129, 129, 0.1);
+}
+
+.btn.voted {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Сохраняем оригинальные стили кнопок */
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Для светлой темы (обычные стили Bootstrap) */
+.light-theme .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* Для тёмной темы */
+.dark-theme .nav-tabs .nav-link.active {
+    color: #212529 !important; /* Чёрный цвет текста */
+    background-color: #f8f9fa !important; /* Светлый фон */
+    border-color: #dee2e6 #dee2e6 #f8f9fa !important;
+}
+
+/* Дополнительно: стили для неактивных вкладок в тёмной теме */
+.dark-theme .nav-tabs .nav-link {
+    color: #adb5bd;
+}
+
+/* Контейнер для обложки */
+.manga-cover-wrapper {
+    position: sticky;
+    top: 80px; /* Отступ равный высоте вашего хедера */
+    margin-bottom: 20px;
+    z-index: 100; /* Убедитесь, что меньше чем у хедера */
+}
+
+/* Стили для изображения */
+.manga-cover-img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    background-color: transparent;
+    box-shadow: none; /* Убираем тень если не нужна */
+}
+
+/* Для темной темы */
+.dark-theme .manga-cover-img {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* Стили для рейтинга */
+.light-theme .rating-section {
+    padding: 1rem;
+    background-color: rgba(236, 236, 236, 0.9);
+    border-radius: 8px;
+}
+.dark-theme .rating-section {
+    padding: 1rem;
+    background-color: rgba(40, 40, 40, 0.8) !important;
+    border-radius: 8px;
+}
+.stars-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.stars-input input[type="radio"] {
+    display: none;
+}
+
+.star-label {
+    color: #ddd;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.stars-input input[type="radio"]:checked ~ .star-label,
+.stars-input input[type="radio"]:hover ~ .star-label,
+.star-label:hover {
+    color: #ffc107;
+}
+
+.stars {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Для темной темы */
+.dark-theme .rating-section {
+    background-color: #2d3748;
+}
+
+.avatar-upload {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-upload label {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.avatar-upload label:hover {
+    opacity: 0.8;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+    background:#fff;
+}
+
+.avatar-wrapper {
+    position: relative;
+    border: 2px solid #ccc; /* Рамка */
+}
+
+.avatar-preview img {
+    border: 3px solid #dee2e6;
+    transition: all 0.3s;
+}
+
+.avatar-preview img:hover {
+    border-color: #0d6efd;
+    transform: scale(1.03);
+}
+
+#imagePreview {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.avatar-container {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
